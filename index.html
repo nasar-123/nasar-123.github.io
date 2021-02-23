@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Temp Flow</title>
+<!-- Include CSS File Here -->
+<link rel="stylesheet" href="loginstyle.css"/>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<h2>Login to continue</h2>
+<form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username" required="true" />
+<label>Password :</label>
+<input type="password" name="password" id="password" required="true" />
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form>
+</div>
+</div>
+</body>
+<script>
+// Below function Executes on click of login button.
+function validate(){
+	var username = document.getElementById("username").value;
+	var password = document.getElementById("password").value;
+	if ( username == "Nasar" && password == "123"){
+	window.location = "home.html"; // Redirecting to other page.
+	return false;
+}
+else{
+	swal("Username or password is inncorrect");
+}
+
+}
+</script>
+</html>
